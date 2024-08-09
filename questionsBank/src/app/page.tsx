@@ -16,14 +16,14 @@ export default function Landing() {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Link
-                href="/question"
+                href="/questions"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 py-8 text-xl font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >
                 Submit a Question
               </Link>
               <Link
-                href="/acess"
+                href="/access"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 py-8 text-xl font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >

@@ -46,11 +46,11 @@ export default function Form() {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center w-full px-2">
+    <div className="h-screen flex flex-col items-center justify-center w-full px-2 bg-emerald-700">
       <Toaster position="top-center" reverseOrder={false} />
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-[#3b5441] justify-center px-5 py-5 rounded rounded-lg"
+        className="w-full max-w-md bg-[#3b5441] justify-center px-5 py-5 rounded-lg"
       >
         <div className="flex flex-col items-start">
           <h1 className="text-[#fdb44b] text-2xl font-bold">
