@@ -5,13 +5,15 @@ import { connectToDb } from "@/db";
 
 export async function GET(request: Request) {
   await connectToDb();
-  const questions = await Questions.find({
-    __v: 0,
-    _id: 0,
-    createdAt: 0,
-    updatedAt: 0,
-  });
-  return NextResponse.json({ questions });
+  try {
+    const questions = await Questions.find(
+      {},
+      { __v: 0, _id: 0, createdAt: 0, updatedAt: 0 }
+    );
+    return NextResponse.json({ questions });
+  } catch (err: any) {
+    return NextResponse.json({ error: "Error fetching questions" });
+  }
 }
 
 export async function POST(request: Request) {
