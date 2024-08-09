@@ -38,7 +38,7 @@ export async function POST(
       return NextResponse.json({ isValid: false }, { status: 404 });
     }
 
-    const token = User.generateAccessKey(username);
+    const token = await User.generateAccessKey(username);
 
     return NextResponse.json({ isValid: true, acessKey: token });
   } catch (error) {
